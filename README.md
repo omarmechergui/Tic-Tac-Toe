@@ -29,7 +29,7 @@ A simple, interactive two-player Tic-Tac-Toe game built using [ HTML, CSS, JavaS
 
 4. Run the app:
    ```bash
-   npm start
+   npm run dev
    ```
 
 ## Usage
