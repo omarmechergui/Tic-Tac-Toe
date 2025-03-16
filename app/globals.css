@@ -1,0 +1,141 @@
+/* General Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Scoreboard */
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+.score {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Game Board */
+.gameboard {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 5px;
+  background-color: #000;
+  padding: 5px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual Cell */
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+/* Hover & Click Effects */
+.square:hover {
+  background-color: #f1f1f1;
+}
+
+.square:active {
+  transform: scale(0.95);
+}
+
+/* Removed X and O Colors */
+/* .square.X { color: #ff4757; }
+.square.O { color: #1e90ff; } */
+
+/* Game Status */
+.status {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.reset-btn {
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.reset-btn:hover {
+  background-color: #0056b3;
+}
+
+.reset-btn:active {
+  transform: scale(0.95);
+}
+
+/* Reset Score Button */
+.reset-score {
+  background-color: #dc3545;
+}
+
+.reset-score:hover {
+  background-color: #b02a37;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .gameboard {
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(3, 90px);
+  }
+  
+  .square {
+    width: 90px;
+    height: 90px;
+    font-size: 28px;
+  }
+
+  .status {
+    font-size: 20px;
+  }
+
+  .reset-btn {
+    font-size: 16px;
+    padding: 10px 18px;
+  }
+}
